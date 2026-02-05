@@ -13,7 +13,7 @@ The project uses multiple datasets configured in the `DATASETS` dictionary. To a
 - `pmma_50um`
 
 #### `2024_04_17_SAMPLES`  
-**Glass, PE, and Steel pure samples with size variations**
+**Glass, PE, and Steel pure samples without size variations**
 - `glass_50um_large`
 - `pe_50um_multi`
 - `steel_50um_single`
