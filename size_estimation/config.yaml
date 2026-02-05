@@ -1,0 +1,36 @@
+# Model Configuration
+model:
+  input_shape: null  # Will be set dynamically based on data
+  num_classes: 4     # Number of size bins
+
+# Training Configuration
+training:
+  epochs: 50
+  batch_size: 32
+  random_state: 42
+  early_stopping:
+    patience: 10
+    monitor: 'val_loss'
+    restore_best_weights: true
+
+# Size Bins Configuration
+size_bins:
+  - min: 15
+    max: 30
+    label: "Bin 1"
+  - min: 38
+    max: 57
+    label: "Bin 2"
+  - min: 67
+    max: 78
+    label: "Bin 3"
+  - min: 300
+    max: 330
+    label: "Bin 4"
+
+
+# Output Configuration
+output:
+  model_dir: "output/size_estimation/models"
+  plot_dir: "output/size_estimation/plots"
+  log_file: "output/size_estimation/training.log" 

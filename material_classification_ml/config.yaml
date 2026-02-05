@@ -1,0 +1,58 @@
+# Training Configuration
+training:
+  num_seeds: 10
+  random_state: 42
+  feature_correlation_threshold: 0.8
+  output_dir: "output/material_classification/ml"
+
+# Model Configuration
+models:
+  random_forest:
+    n_estimators: 100
+    max_depth: None
+    min_samples_split: 2
+    min_samples_leaf: 1
+
+  gradient_boosting:
+    n_estimators: 100
+    learning_rate: 0.1
+    max_depth: 3
+    min_samples_split: 2
+    min_samples_leaf: 1
+
+  neural_network:
+    hidden_layer_sizes: [80, 80]
+    activation: "relu"
+    solver: "adam"
+    alpha: 0.0001
+    max_iter: 500
+
+  svm:
+    kernel: "rbf"
+    C: 1.0
+    gamma: "scale"
+
+  knn:
+    n_neighbors: 5
+    weights: "uniform"
+    algorithm: "auto"
+
+# Feature Extraction Configuration
+features:
+  time_domain:
+    - mean
+    - std
+    - kurtosis
+    - skew
+    - entropy
+    - zero_crossings
+    - peak_to_peak
+    - rms
+
+  frequency_domain:
+    - spectral_centroid
+    - spectral_bandwidth
+    - spectral_rolloff
+    - spectral_flatness
+    - spectral_contrast
+    - spectral_flux 
